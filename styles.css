@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica+Text:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+:root {
+  font-family: "Finlandica Text", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+body {
+  /* цвета с tailwindcss.com/docs/colors */
+  --c-bg: oklch(14.5% 0.008 326);
+  --c-main: oklch(21.2% 0.019 322.12);
+  --c-text-primary: oklch(92.2% 0.005 325.62);
+  --c-text-secondary: oklch(86.5% 0.012 325.68);
+}
+
+body {
+  width: 100%;
+  background-color: var(--c-bg);
+  color: var(--c-text-primary);
+  scrollbar-color: var(--c-text-primary) var(--c-bg); 
+}
+
+main {
+  border-radius: 20px;
+  background: var(--c-main);
+  margin: auto;
+  margin-top: 20vh;
+  padding: 48px;
+  width: max-content;
+  height: 60vh;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  float: left;
+  padding: 12px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+header > a {
+  width: max-content;
+}
+
+header > .profile-picture {
+  border-radius: 50%;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+header > h1 {
+  font-size: 1.5rem;
+}
+
+header > .subtext {
+  font-size: 0.65rem;
+  margin-bottom: 0.4rem;
+  color: var(--c-text-secondary);
+  width: max-content;
+}
+
+article {
+  float: right;
+  padding: 12px;
+  margin-left: 12px;
+  width: 40ch;
+  text-align: left;
+}
+
+article > h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+main:has(article) header {
+  width: 72px;
+  gap: 12px;
+}
+
+main:has(article) header > h1, main:has(article) header > p {
+  display: none;
+}
+
+main:has(article) header > a {
+  writing-mode: sideways-lr;
+}
