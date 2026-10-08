@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  overflow: hidden;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 2ch;
+}
+
+th, td {
+  padding: 1ch;
+  border-bottom: 1px solid var(--c-text-secondary);
+}
+
+thead th {
+  font-weight: 600;
+  text-align: left;
+}
+
+.align-left   { text-align: left; }
+.align-center { text-align: center; }
+.align-right  { text-align: right; }
